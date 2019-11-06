@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:600&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+html {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  color: map-get($map: $colors-neutral, $key: very-dark-cyan);
+}
+
+body {
+  text-align: center;
+}
+
+h1,
+h2 {
+  font-family: Poppins, sans-serif;
+  font-weight: 600;
+}
+
+.button {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 0.65rem;
+  color: black;
+}
+
+.button--primary {
+  color: white;
+}
+
+.hero__title {
+  font-size: 1.35rem;
+}
+
+.hero__subtitle {
+  font-size: 0.93rem;
+}
+
+.card__title {
+  font-size: 1.125rem;
+}
+
+.card__text {
+  font-size: 0.8rem;
+  color: map-get($map: $colors-neutral, $key: grayish-blue);
+  line-height: 1.5;
+}
+
+.cta__title {
+  font-size: 1rem;
+}
+
+.footer {
+  color: map-get($map: $colors-neutral, $key: very-pale-cyan);
+  text-align: left;
+}
+
+.footer__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  font-size: 0.6rem;
+  text-align: center;
+}
+
+@include for-tablet-landscape-up {
+  body {
+    text-align: left;
+  }
+
+  .button {
+    font-size: 0.75rem;
+  }
+
+  .button--cta,
+  .card__text,
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+
+  .hero__title {
+    font-size: 2.25rem;
+  }
+
+  .hero__subtitle {
+    line-height: 1.6;
+  }
+
+  .card__title {
+    font-size: 1.6rem;
+  }
+
+  .cta__title {
+    font-size: 1.75rem;
+  }
+
+  .footer__copyright {
+    text-align: right;
+  }
+}

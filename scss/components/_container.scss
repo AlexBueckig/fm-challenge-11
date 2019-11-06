@@ -1,0 +1,21 @@
+.container {
+  padding: 0 1em;
+}
+
+@include for-tablet-landscape-up {
+  .container {
+    padding: 0 5em;
+  }
+}
+
+@include for-desktop-up {
+  .container {
+    padding: 0 9em;
+  }
+}
+
+@include for-big-desktop-up {
+  .container {
+    padding: 0 14em;
+  }
+}

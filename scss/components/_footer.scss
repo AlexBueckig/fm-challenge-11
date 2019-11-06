@@ -1,0 +1,119 @@
+.footer {
+  background: map-get($map: $colors-neutral, $key: very-dark-cyan);
+  padding-bottom: 3em;
+
+  &__logo {
+    margin-bottom: 2em;
+  }
+
+  &__contact-info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+
+  &__contact-icon:first-of-type {
+    align-self: start;
+    padding-top: 0.25em;
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: 3em;
+  }
+
+  &__list-item {
+    margin: 1em 0;
+  }
+
+  &__list--social {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  &__list-item--social {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 0.3em;
+  }
+
+  &__link--social {
+    display: inline-block;
+    width: 1.125rem;
+    height: 1.125rem;
+
+    path {
+      fill: white;
+    }
+  }
+
+  &__link {
+    transition: 300ms;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $color-primary;
+  }
+
+  &__list-item--social:hover,
+  &__list-item--social:focus {
+    border-color: $color-primary;
+
+    .footer__link--social {
+      path {
+        fill: $color-primary;
+      }
+    }
+  }
+}
+
+@include for-tablet-landscape-up {
+  .footer {
+    display: grid;
+    grid-template-columns: minmax(200px, 400px) 1fr auto;
+    grid-template-areas:
+      'logo logo logo'
+      'contact list social'
+      'copyright copyright copyright';
+    gap: 2em 1em;
+
+    &__logo {
+      grid-area: logo;
+    }
+
+    &__list {
+      grid-area: list;
+      display: grid;
+      grid-template-columns: repeat(2, max-content);
+      grid-template-rows: repeat(3, max-content);
+      grid-auto-flow: column;
+      gap: 1em 6em;
+      margin: 0 auto;
+    }
+
+    &__list--social {
+      grid-area: social;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, auto);
+      gap: 1em;
+    }
+
+    &__list-item {
+      margin: 0;
+    }
+
+    &__copyright {
+      grid-area: copyright;
+    }
+  }
+}

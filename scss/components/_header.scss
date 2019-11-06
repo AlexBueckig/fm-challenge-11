@@ -1,0 +1,21 @@
+.header {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1em;
+
+  &__logo {
+    height: 1rem;
+  }
+}
+
+@include for-tablet-landscape-up {
+  .header {
+    margin-top: 3rem;
+    &__logo {
+      height: 2rem;
+    }
+  }
+}
